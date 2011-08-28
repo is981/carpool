@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+	<xa-datasource jndi-name="java:jboss/datasources/CarpoolXADS" pool-name="CarpoolXADS" enabled="true" use-java-context="true" use-ccm="true">
+        <xa-datasource-property name="ServerName">localhost</xa-datasource-property>
+        <xa-datasource-property name="PortNumber">5432</xa-datasource-property>
+        <xa-datasource-property name="DatabaseName">carpool</xa-datasource-property>
+        <xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+        <driver>postgresql-9.0-801.jdbc4.jar</driver>
+        <xa-pool>
+            <min-pool-size>10</min-pool-size>
+            <max-pool-size>60</max-pool-size>
+            <prefill>false</prefill>
+            <use-strict-min>false</use-strict-min>
+            <flush-strategy>FailingConnectionOnly</flush-strategy>
+            <pad-xid>false</pad-xid>
+            <wrap-xa-resource>false</wrap-xa-resource>
+        </xa-pool>
+        <security>
+            <user-name>carpool</user-name>
+            <password>0ad6526861080801291b38afe04ac1238dd45cd8a239c4cc380cbed8b8224831fed2f816b30531e31b9209ce964887d1ee9f6390d50d43acd023bd61368cf37a</password>
+        </security>
+    </xa-datasource>
+    <drivers>
+        <driver name="postgresql-9.0-801.jdbc4.jar" module="org.postgresql.Driver">
+            <xa-datasource-class>
+                org.postgresql.xa.PGXADataSource
+            </xa-datasource-class>
+        </driver>
+    </drivers>
+</datasources>

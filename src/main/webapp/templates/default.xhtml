@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Carpool</title>
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="css/skeleton.css"/>
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/layout.css"/>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="sixteen columns content">
+                <div class="eleven columns alpha">
+                    <div class="three columns alpha">
+                        <a href="#" >
+													<img src="images/carpool.png" alt="Carpool" title="Carpool" height="60" />
+												</a>
+												</div>
+												<div class="four columns omega offset-by-four">
+												<h:form>
+												<div style="diplay:inline-block">
+												<p:spacer width="40" height="21" />
+												<p:inputText id="search" size="20">
+												<f:validateLength minimum="3" />
+												</p:inputText>
+												<p:watermark for="search" value="Search" />
+												</div>
+												</h:form>
+												</div>
+												</div>
+												<div class="five columns omega">
+												<p:spacer width="10" height="10" />
+												<h:form>
+												<p:menubar style="right:0px">
+												<p:submenu label="Context">
+												<p:menuitem value="Asset Manager" url="#"/>
+												<p:menuitem value="Dealer Group" url="#"/>
+												<p:menuitem value="Advisor" url="#"/>
+												</p:submenu>
+												<p:menuitem value="Dashboard" url="#"/>
+												<p:menuitem value="Admin" url="#"/>
+												<p:menuitem value="Logout" action="#{sessionManager.logout}"/>
+												</p:menubar>
+												</h:form>
+												</div>
+
+												<div class="sixteen columns alpha">
+												<p:spacer width="100" height="10" />
+												</div>
+
+												<div class="sixteen columns alpha">
+												<h:form>
+												<p:toolbar value="Context">
+												<p:toolbarGroup align="left">
+												<ui:insert name="buttons"/>
+												</p:toolbarGroup>
+
+												<p:divider />
+
+												<p:toolbarGroup align="right">
+												<p:menuButton value="More">
+												<ui:insert name="menu"/>
+												</p:menuButton>
+												</p:toolbarGroup>
+												</p:toolbar>
+												</h:form>
+												</div>
+
+												<div class="sixteen columns alpha">
+												<p:messages showDetail="true"/>
+												</div>
+
+												<div class="sixteen columns alpha">
+												<p:breadCrumb>
+												<p:menuitem value="Home" url="/home.xhtml" />
+												<p:menuitem value="Master Portfolio" url="#" />
+												<p:menuitem value="Model Portfolio" url="#" />
+												<p:menuitem value="Asset Class" url="#" />
+												<p:menuitem value="Asset" url="#" />
+												</p:breadCrumb>
+												</div>
+
+												<div class="sixteen columns alpha">
+												<p:outputPanel id="content" autoUpdate="true">
+												<ui:insert name="content"/>
+												</p:outputPanel>
+												</div>
+												</div>
+												</div>
+												</h:body>
+												</html>

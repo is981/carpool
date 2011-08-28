@@ -1,0 +1,1 @@
+insert into public.user (username, email, name, salt, password, active) values ('test', 'test@test.com', 'Test User', 'salt', '2908d2c28dfc047741fc590a026ffade237ab2ba7e1266f010fe49bde548b5987a534a86655a0d17f336588e540cd66f67234b152bbb645b4bb85758a1325d64', true);

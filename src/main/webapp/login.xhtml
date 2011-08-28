@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Carpool</title>
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="css/skeleton.css"/>
+        <link rel="stylesheet" href="css/base.css"/>
+        <link rel="stylesheet" href="css/layout.css"/>
+    </h:head>
+
+    <h:body>
+        <div class="container">
+            <div class="sixteen columns content">
+                <div class="sixteen columns alpha">
+                    <p:spacer height="250" width="100" />
+                </div>
+
+                <div class="four columns alpha offset-by-four">
+                    <img src="images/carpool.png" alt="Carpool" title="Carpool" height="60"  style="display:block; margin-left:auto; margin-right:auto"/>
+                </div>
+                <div class="eight columns omega">
+                    <h:form>
+                        <p:outputPanel id="login" >
+                            <p:focus />
+                            <h:panelGrid columns="3" cellpadding="5">
+                                <p:inputText id="username" value="#{credentials.username}" label="Username" required="true" />
+                                <p:watermark for="username" value="Username" />
+                                <p:message for="username" />
+
+                                <p:password id="password" value="#{credentials.password}" label="Password" required="true" feedback="false" />
+                                <p:watermark for="password" value="Password" />
+                                <p:message for="password" />
+                            </h:panelGrid>
+
+                            <p:commandButton value="Login" update="login" actionListener="#{sessionManager.login}"/>
+                        </p:outputPanel>
+                    </h:form>
+                </div>
+
+                <div class="eight columns alpha offset-by-four">
+                    <p:messages showDetail="true" autoUpdate="true"/>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

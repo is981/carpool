@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.prime.com.tr/ui"
+                template="/templates/default.xhtml">
+
+    <ui:define name="buttons">
+        <p:commandButton type="button" value="New" image="ui-icon-document" />
+        <p:commandButton type="button" value="Open" image="ui-icon-folder-open"/>
+        <p:divider />
+        <p:commandButton type="button" title="Save" image="ui-icon-disk"/>
+        <p:commandButton type="button" title="Delete" image="ui-icon-trash"/>
+        <p:commandButton type="button" title="Print" image="ui-icon-print"/>
+    </ui:define>
+    
+    <ui:define name="menu">
+        <p:menuitem value="Create Master Portfolio" url="#"></p:menuitem>
+        <p:menuitem value="Create Model Portfolio" url="#"></p:menuitem>
+    </ui:define>
+</ui:composition>

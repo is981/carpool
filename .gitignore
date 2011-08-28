@@ -1,0 +1,15 @@
+# IDEA Ignores
+*.iml
+*.ipr
+*.iws
+.idea/
+local.properties
+
+# MAVEN Ignores
+target/
+.classpath
+.project
+.settings/
+
+#VIM Ignores
+*.swp
